@@ -1,3 +1,7 @@
+import EmployeeManagement.Employee;
+import EmployeeManagement.EmployeeManagementSystem;
+import EmployeeManagement.Position;
+
 import java.util.List;
 import java.util.Map;
 
@@ -32,7 +36,7 @@ public class Main {
 
 
 
-        //wypluwanie informacji przy użyciu metod z class EmployeeManagementSystem
+        //wypluwanie informacji przy użyciu metod z class EmployeeManagement.EmployeeManagementSystem
         System.out.println("Lista pracowników:");
         system.displayAllEmployees();
 

@@ -1,3 +1,5 @@
+package EmployeeManagement;
+
 public enum Position {
     PREZES(25000, 1),
     VICEPREZES(18000, 2),

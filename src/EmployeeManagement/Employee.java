@@ -1,3 +1,5 @@
+package EmployeeManagement;
+
 import java.util.Objects;
 
 public class Employee {
@@ -57,7 +59,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee{" +
+        return "EmployeeManagement.Employee{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
