@@ -1,4 +1,4 @@
-package EmployeeManagement;
+package model;
 
 public enum Position {
     PREZES(25000, 1),
@@ -21,6 +21,10 @@ public enum Position {
 
     public int getLevel() {
         return level;
+    }
+
+    public double baseSalary(){
+        return baseSalary;
     }
 }
 

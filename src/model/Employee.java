@@ -1,4 +1,4 @@
-package EmployeeManagement;
+package model;
 
 import java.util.Objects;
 
@@ -10,13 +10,13 @@ public class Employee {
     private Position position;
     private double salary;
 
-    private Employee(String firstName, String lastName, String email, String companyName, Position position) {
+    public Employee(String firstName, String lastName, String email, String companyName, Position position, double salary) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.companyName = companyName;
         this.position = position;
-        this.salary = position.getBaseSalary();
+        this.salary = salary;
     }
 
     public String getFirstName() {
@@ -59,7 +59,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "EmployeeManagement.Employee{" +
+        return "model.Employee{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
@@ -81,6 +81,7 @@ public class Employee {
         private String email;
         private String companyName;
         private Position position;
+        private double salary;
 
         public EmployeeBuilder setFirstName(String firstName) {
             this.firstName = firstName;
@@ -108,10 +109,10 @@ public class Employee {
         }
 
         public Employee build() {
-            if (firstName == null || lastName == null || email == null || companyName == null || position == null) {
+            if (firstName == null || lastName == null || email == null || companyName == null || position == null || salary < 0) {
                 throw new IllegalStateException("Uzupelnij pola");
             }
-            return new Employee(firstName, lastName, email, companyName, position);
+            return new Employee(firstName, lastName, email, companyName, position, salary);
         }
     }
 }
